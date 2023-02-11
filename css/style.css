@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -20,8 +22,16 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 
-.navbar {
+header {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
 
+.navbar {
+    top: 0;
+    position: absolute;
+    width: 100%;
     padding: 10px 300px;
     display: flex;
     justify-content: space-between;
@@ -36,6 +46,16 @@ body {
 .nav-title span {
     transition: 0.2s;
 }
+
+.nav-title-span {
+    color: var(--light-purple);
+}
+
+.nav-title-span:hover {
+    color: var(--light-purple)!important;
+    text-shadow: 0px 0px 10px #fff!important;
+}
+
 
 .nav-title span:hover {
     text-shadow: 0px 0px 10px var(--purple);
@@ -76,6 +96,72 @@ body {
     color: var(--purple);
 }
 
+.header-text-animation{
+    background-color: var(--dark-gray);
+    height: 90px;
+    width: 400px;
+    margin-left: 425px;
+    border-left: 2px solid var(--light-purple);
+    z-index: 1;
+    position: absolute;
+    animation: text-animation 2s infinite,
+    font-animation 4s steps(1) ;
+}
+
+@keyframes font-animation {
+    0%{
+        margin-left: 86px;
+    }
+    12.5%{
+        margin-left: 125px;
+    }
+    25%{
+        margin-left: 170px;
+    }
+    37.5%{
+        margin-left: 215px;
+    }
+    50%{
+        margin-left: 255px;
+    }
+    62.5%{
+        margin-left: 300px;
+    }
+    75%{
+        margin-left: 340px;
+    }
+    87.5%{
+        margin-left: 380px;
+    }
+
+    100%{
+        margin-left: 425px;
+    }
+}
+
+@keyframes text-animation {
+    0%{
+        border:none;
+    }
+
+    25%{
+        border-left: 2px solid var(--light-purple);
+    }
+
+    50%{
+        border:none;
+    }
+
+    75%{
+        border-left: 2px solid var(--light-purple);
+    }
+
+    100%{
+        border:none;
+    }
+
+}
+
 .header-text-content h2 {
     font-size: 20px;
     font-weight: 400;
@@ -91,3 +177,24 @@ body {
     margin-top: 10px;
     margin-left: 84px;
 }
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--light-purple);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-down i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: var(--purple);
+}
+
