@@ -20,6 +20,7 @@ a{
 body {
     background-color: var(--dark-gray);
     font-family: 'Roboto Mono', monospace;
+    overflow: hidden;
 }
 
 header {
@@ -105,7 +106,7 @@ header {
     z-index: 1;
     position: absolute;
     animation: text-animation 2s infinite,
-    font-animation 4s steps(1) ;
+    font-animation 4s steps(1);
 }
 
 @keyframes font-animation {
@@ -196,5 +197,81 @@ header {
     font-size: 30px;
     margin-bottom: 10px;
     color: var(--purple);
+    animation: arrow-animation 3s infinite;
 }
 
+@keyframes arrow-animation {
+    0%{
+        margin-bottom: 0px;
+    }
+    25%{
+        margin-bottom: 10px;
+    }
+    50%{
+        margin-bottom: 0px;
+    }
+    75%{
+        margin-bottom: 10px;
+    }
+    100%{
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .header-text-content {
+        padding: 0;
+    }
+
+    .header-text-content h1{
+        font-size: 50px;
+        margin-left: 15px;
+    }
+
+    .header-text-content h2, .header-subtitle{
+        margin-left: 73px;
+    }
+
+    .header-text-animation {
+        height: 65px;
+        margin-left: 305px;
+    }
+
+    @keyframes font-animation {
+        0%{
+            margin-left: 59px;
+        }
+        12.5%{
+            margin-left: 90px;
+        }
+        25%{
+            margin-left: 125px;
+        }
+        37.5%{
+            margin-left: 155px;
+        }
+        50%{
+            margin-left: 185px;
+        }
+        62.5%{
+            margin-left: 212px;
+        }
+        75%{
+            margin-left: 240px;
+        }
+        87.5%{
+            margin-left: 270px;
+        }
+        100%{
+            margin-left: 10px;
+        }
+    }
+  }
